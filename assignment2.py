@@ -71,7 +71,6 @@ def displayPerson(id, downloaded_data):
 
 
 
-import argparse
 
 def main(url):
     print(f"Running main with URL = {url} ...")
