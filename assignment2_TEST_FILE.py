@@ -1,6 +1,4 @@
 
-
-
 import argparse
 import urllib.request
 import logging
@@ -18,7 +16,6 @@ def downloadData(url):
     return the_file    
     
     
-
 
 
 #Splitting the csv file and adding the data to a dictionary
@@ -65,12 +62,10 @@ def displayPerson(id, downloaded_data):
 
 
 
-
-
 #Main funciton that runs the program
 
 
-
+import sys   #test
 import argparse
 
 def main(url):
@@ -112,7 +107,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--url", help="URL to the datafile", type=str, required=True)   #Makes program takes --url string parameter 
     
-   
+    # Simulate command-line input (you can change the URL as needed) test
+    sys.argv = ['script_name', '--url', 'https://s3.amazonaws.com/cuny-is211-spring2015/birthdays100.csv']
     
     args = parser.parse_args()
     main(args.url)
